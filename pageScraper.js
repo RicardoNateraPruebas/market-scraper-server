@@ -106,7 +106,7 @@ const scraperObject = {
 	async scraper(browser,url,search,store,cat){
 		let data={}
 		let page = await browser.newPage();
-		console.log(`Navigating to ${url}...`);
+		console.log(`Navigating...`);
 		await page.goto(url,{waitUntil: "domcontentloaded"});
 		if(store=="livre"){
 			data =   (search) ? (await scraperLivreSearch(page,cat)):(await scraperLivre(page,cat))
