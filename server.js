@@ -21,6 +21,7 @@ var options = {
 };
 
 mongoose.connect(dbUrl)
+  .catch(error => console.log(error))
   .then(() => console.log('Connected!'));
 
 app.use(bodyParser.json());
