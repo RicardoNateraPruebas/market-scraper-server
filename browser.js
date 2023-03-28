@@ -3,12 +3,13 @@ let chrome={}
 async function startBrowser(){
 	let browser;
 	try {
+		
 		var options={}
 		if(process.env.AWS_LAMBDA_FUNCTION_VERSION){
 			chrome=require("chrome-aws-lambda");
 			puppeteer= require("puppeteer-core")
 		}else{
-			let puppeteer = require('puppeteer');
+			puppeteer = require('puppeteer');
 		}
 		if(process.env.AWS_LAMBDA_FUNCTION_VERSION){
 			options={
