@@ -41,6 +41,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/',(req,res)=>{
+  res.send({message:"Ricardo Natera's server"})
+})
 app.post('/',async (req, res) => {
   
   try {
