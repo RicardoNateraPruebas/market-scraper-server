@@ -104,6 +104,9 @@ const scraperLivreSearch= async(page,cat)=>{
 }
 const scraperObject = {
 	async scraper(browser,url,search,store,cat){
+		try {
+			
+		
 		let data={}
 		let page = await browser.newPage();
 		console.log(`Navigating...`);
@@ -114,6 +117,9 @@ const scraperObject = {
 			data = await scraperBuscape(page)
 		}
 		return data
+	} catch (error) {
+			console.log(error)
+	}
 	}
 }
 
