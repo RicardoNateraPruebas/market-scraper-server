@@ -1,8 +1,8 @@
 const scrollToBottom = require("scroll-to-bottomjs");
 const wait = async (page) => {
-	await page.waitForTimeout(5000)
+	await page.waitForTimeout(0)
 	await page.evaluate(scrollToBottom);
-	await page.waitForTimeout(5000)
+	await page.waitForTimeout(0)
 }
 const scraperBuscape= async(page)=>{
 	await page.waitForSelector('#__next > div.Content_Container__heIrp.container-lg > div > div.col-lg-9 > div.Hits_Wrapper__3q_7P');
