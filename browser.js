@@ -17,7 +17,7 @@ async function startBrowser(){
 				defaultViewport: chrome.defaultViewport,
 				executablePath: await chrome.executablePath,
 				headless:true,
-				ignoreHTTPSErrors:true,
+				ignoreHTTPSErrors:true
 			}
 		}else{
 			options = {
